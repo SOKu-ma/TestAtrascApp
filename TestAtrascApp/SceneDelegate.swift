@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  TestAtrascApp
 //
-//  Created by 太田修平 on 2020/10/22.
+//  Created by shuhei ota on 2020/10/22.
 //
 
 import UIKit

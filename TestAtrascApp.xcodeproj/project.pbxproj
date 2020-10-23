@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */; };
+		05B7CDC025431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */; };
+		05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */; };
+		05B7CDC225431BCF004E6A70 /* ClubIntroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B7CDB525431BCE004E6A70 /* ClubIntroCollectionViewCell.xib */; };
+		05B7CDC325431BCF004E6A70 /* ClubIntroDuctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB725431BCF004E6A70 /* ClubIntroDuctionController.swift */; };
+		05B7CDC425431BCF004E6A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB825431BCF004E6A70 /* ViewController.swift */; };
+		05B7CDC525431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB925431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift */; };
+		05B7CDC625431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBA25431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift */; };
+		05B7CDC725431BCF004E6A70 /* PointCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBB25431BCF004E6A70 /* PointCheckController.swift */; };
+		05B7CDC825431BCF004E6A70 /* ClubInfomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBC25431BCF004E6A70 /* ClubInfomationController.swift */; };
+		05B7CDC925431BCF004E6A70 /* ClubIntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */; };
 		05CC82432541751300607762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC82422541751300607762 /* AppDelegate.swift */; };
 		05CC82452541751300607762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC82442541751300607762 /* SceneDelegate.swift */; };
-		05CC82472541751300607762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC82462541751300607762 /* ViewController.swift */; };
 		05CC824A2541751300607762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC82482541751300607762 /* Main.storyboard */; };
 		05CC824C2541751800607762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CC824B2541751800607762 /* Assets.xcassets */; };
 		05CC824F2541751800607762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC824D2541751800607762 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroCollectionViewCell.swift; sourceTree = "<group>"; };
+		05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubIntroDetailMemberTableViewCell.xib; sourceTree = "<group>"; };
+		05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDetailMemberTableViewCell.swift; sourceTree = "<group>"; };
+		05B7CDB525431BCE004E6A70 /* ClubIntroCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubIntroCollectionViewCell.xib; sourceTree = "<group>"; };
+		05B7CDB725431BCF004E6A70 /* ClubIntroDuctionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDuctionController.swift; sourceTree = "<group>"; };
+		05B7CDB825431BCF004E6A70 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05B7CDB925431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDuctionDetailViewController.swift; sourceTree = "<group>"; };
+		05B7CDBA25431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDetailMemberViewController.swift; sourceTree = "<group>"; };
+		05B7CDBB25431BCF004E6A70 /* PointCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCheckController.swift; sourceTree = "<group>"; };
+		05B7CDBC25431BCF004E6A70 /* ClubInfomationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubInfomationController.swift; sourceTree = "<group>"; };
+		05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroModel.swift; sourceTree = "<group>"; };
 		05CC823F2541751300607762 /* TestAtrascApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAtrascApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CC82422541751300607762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CC82442541751300607762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05CC82462541751300607762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05CC82492541751300607762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05CC824B2541751800607762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CC824E2541751800607762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +57,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B7CDB125431BCE004E6A70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */,
+				05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */,
+				05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */,
+				05B7CDB525431BCE004E6A70 /* ClubIntroCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05B7CDB625431BCF004E6A70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				05B7CDB725431BCF004E6A70 /* ClubIntroDuctionController.swift */,
+				05B7CDB825431BCF004E6A70 /* ViewController.swift */,
+				05B7CDB925431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift */,
+				05B7CDBA25431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift */,
+				05B7CDBB25431BCF004E6A70 /* PointCheckController.swift */,
+				05B7CDBC25431BCF004E6A70 /* ClubInfomationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		05B7CDBD25431BCF004E6A70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		05CC82362541751300607762 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +108,15 @@
 		05CC82412541751300607762 /* TestAtrascApp */ = {
 			isa = PBXGroup;
 			children = (
+				05B7CDB625431BCF004E6A70 /* Controller */,
+				05B7CDBD25431BCF004E6A70 /* Model */,
+				05B7CDB125431BCE004E6A70 /* View */,
 				05CC82422541751300607762 /* AppDelegate.swift */,
 				05CC82442541751300607762 /* SceneDelegate.swift */,
-				05CC82462541751300607762 /* ViewController.swift */,
-				05CC82482541751300607762 /* Main.storyboard */,
 				05CC824B2541751800607762 /* Assets.xcassets */,
-				05CC824D2541751800607762 /* LaunchScreen.storyboard */,
 				05CC82502541751800607762 /* Info.plist */,
+				05CC82482541751300607762 /* Main.storyboard */,
+				05CC824D2541751800607762 /* LaunchScreen.storyboard */,
 			);
 			path = TestAtrascApp;
 			sourceTree = "<group>";
@@ -125,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CC824F2541751800607762 /* LaunchScreen.storyboard in Resources */,
+				05B7CDC225431BCF004E6A70 /* ClubIntroCollectionViewCell.xib in Resources */,
 				05CC824C2541751800607762 /* Assets.xcassets in Resources */,
 				05CC824A2541751300607762 /* Main.storyboard in Resources */,
+				05B7CDC025431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +193,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CC82472541751300607762 /* ViewController.swift in Sources */,
+				05B7CDC625431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift in Sources */,
+				05B7CDC425431BCF004E6A70 /* ViewController.swift in Sources */,
 				05CC82432541751300607762 /* AppDelegate.swift in Sources */,
 				05CC82452541751300607762 /* SceneDelegate.swift in Sources */,
+				05B7CDC925431BCF004E6A70 /* ClubIntroModel.swift in Sources */,
+				05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */,
+				05B7CDC725431BCF004E6A70 /* PointCheckController.swift in Sources */,
+				05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */,
+				05B7CDC525431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift in Sources */,
+				05B7CDC325431BCF004E6A70 /* ClubIntroDuctionController.swift in Sources */,
+				05B7CDC825431BCF004E6A70 /* ClubInfomationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
