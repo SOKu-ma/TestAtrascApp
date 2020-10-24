@@ -18,7 +18,7 @@
 		05B7CDC725431BCF004E6A70 /* PointCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBB25431BCF004E6A70 /* PointCheckController.swift */; };
 		05B7CDC825431BCF004E6A70 /* ClubInfomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBC25431BCF004E6A70 /* ClubInfomationController.swift */; };
 		05B7CDC925431BCF004E6A70 /* ClubIntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */; };
-		05B7CDCE2543FBE3004E6A70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDCD2543FBE3004E6A70 /* LoginViewController.swift */; };
+		05B7CE0825446AD2004E6A70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CE0725446AD2004E6A70 /* LoginViewController.swift */; };
 		05CC82432541751300607762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC82422541751300607762 /* AppDelegate.swift */; };
 		05CC82452541751300607762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC82442541751300607762 /* SceneDelegate.swift */; };
 		05CC824A2541751300607762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC82482541751300607762 /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 		05B7CDBB25431BCF004E6A70 /* PointCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCheckController.swift; sourceTree = "<group>"; };
 		05B7CDBC25431BCF004E6A70 /* ClubInfomationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubInfomationController.swift; sourceTree = "<group>"; };
 		05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroModel.swift; sourceTree = "<group>"; };
-		05B7CDCD2543FBE3004E6A70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		05B7CE0725446AD2004E6A70 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		05CC823F2541751300607762 /* TestAtrascApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAtrascApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CC82422541751300607762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CC82442541751300607762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 				05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */,
 				05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */,
 				05B7CDB525431BCE004E6A70 /* ClubIntroCollectionViewCell.xib */,
-				05B7CDCD2543FBE3004E6A70 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -74,6 +73,7 @@
 		05B7CDB625431BCF004E6A70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				05B7CE0725446AD2004E6A70 /* LoginViewController.swift */,
 				05B7CDB725431BCF004E6A70 /* ClubIntroDuctionController.swift */,
 				05B7CDB825431BCF004E6A70 /* ViewController.swift */,
 				05B7CDB925431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift */,
@@ -196,7 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B7CDCE2543FBE3004E6A70 /* LoginViewController.swift in Sources */,
+				05B7CE0825446AD2004E6A70 /* LoginViewController.swift in Sources */,
 				05B7CDC625431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift in Sources */,
 				05B7CDC425431BCF004E6A70 /* ViewController.swift in Sources */,
 				05CC82432541751300607762 /* AppDelegate.swift in Sources */,
