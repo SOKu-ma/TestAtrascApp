@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  TestAtrascApp
 //
-//  Created by 太田修平 on 2020/10/24.
+//  Created by shuhei ota on 2020/10/24.
 //
 
 import UIKit
@@ -16,13 +16,16 @@ class LoginViewController: UIViewController {
         
         // ボタンの整形
         // ログイン
-        btnLogin.layer.borderColor = UIColor.gray.cgColor
+//        btnLogin.layer.borderColor = UIColor.gray.cgColor
         btnLogin.layer.borderWidth = 1
-        btnLogin.layer.cornerRadius = 10
-        btnLogin.layer.shadowOpacity = 0.7
-        btnLogin.layer.shadowRadius = 3
-        btnLogin.layer.shadowColor = UIColor.black.cgColor
-        btnLogin.layer.shadowOffset = CGSize(width: 5, height: 5)
+        btnLogin.layer.cornerRadius = 20
+//        btnLogin.layer.shadowOpacity = 0.7
+//        btnLogin.layer.shadowRadius = 3
+//        btnLogin.layer.shadowColor = UIColor.black.cgColor
+//        btnLogin.layer.shadowOffset = CGSize(width: 5, height: 5)
+        btnLogin.layer.borderColor = UIColor.systemBlue.cgColor
+        btnLogin.layer.backgroundColor = UIColor.systemBlue.cgColor
+        btnLogin.setTitleColor(UIColor.white, for: .normal)
 
     }
     
