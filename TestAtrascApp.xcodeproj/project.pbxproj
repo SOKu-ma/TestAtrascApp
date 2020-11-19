@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */; };
+		051217B32546EAAE00F0A8CF /* ClubInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */; };
 		05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */; };
 		05B7CDC025431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */; };
 		05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfoTableViewCell.swift; sourceTree = "<group>"; };
+		051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubInfoTableViewCell.xib; sourceTree = "<group>"; };
 		05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroCollectionViewCell.swift; sourceTree = "<group>"; };
 		05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubIntroDetailMemberTableViewCell.xib; sourceTree = "<group>"; };
 		05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDetailMemberTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */,
 				05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */,
 				05B7CDB525431BCE004E6A70 /* ClubIntroCollectionViewCell.xib */,
+				051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */,
+				051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CC824F2541751800607762 /* LaunchScreen.storyboard in Resources */,
+				051217B32546EAAE00F0A8CF /* ClubInfoTableViewCell.xib in Resources */,
 				05B7CDC225431BCF004E6A70 /* ClubIntroCollectionViewCell.xib in Resources */,
 				05CC824C2541751800607762 /* Assets.xcassets in Resources */,
 				05CC824A2541751300607762 /* Main.storyboard in Resources */,
@@ -196,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */,
 				05B7CE0825446AD2004E6A70 /* LoginViewController.swift in Sources */,
 				05B7CDC625431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift in Sources */,
 				05B7CDC425431BCF004E6A70 /* ViewController.swift in Sources */,
