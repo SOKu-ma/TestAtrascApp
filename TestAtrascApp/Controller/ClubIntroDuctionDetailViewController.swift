@@ -25,37 +25,22 @@ class ClubIntroDuctionDetailViewController: UIViewController {
         
         // 各種ボタンの整形
         // メンバー
-//        btnMenber.layer.borderColor = UIColor.gray.cgColor
         btnMenber.layer.borderWidth = 1
         btnMenber.layer.cornerRadius = 20
-//        btnMenber.layer.shadowOpacity = 0.7
-//        btnMenber.layer.shadowRadius = 3
-//        btnMenber.layer.shadowColor = UIColor.black.cgColor
-//        btnMenber.layer.shadowOffset = CGSize(width: 5, height: 5)
         btnMenber.layer.borderColor = UIColor.systemBlue.cgColor
         btnMenber.layer.backgroundColor = UIColor.systemBlue.cgColor
         btnMenber.setTitleColor(UIColor.white, for: .normal)
         
         // 活動内容
-//        btnActivityContent.layer.borderColor = UIColor.gray.cgColor
         btnActivityContent.layer.borderWidth = 1
         btnActivityContent.layer.cornerRadius = 20
-//        btnActivityContent.layer.shadowOpacity = 0.7
-//        btnActivityContent.layer.shadowRadius = 3
-//        btnActivityContent.layer.shadowColor = UIColor.black.cgColor
-//        btnActivityContent.layer.shadowOffset = CGSize(width: 5, height: 5)
         btnActivityContent.layer.borderColor = UIColor.systemBlue.cgColor
         btnActivityContent.layer.backgroundColor = UIColor.systemBlue.cgColor
         btnActivityContent.setTitleColor(UIColor.white, for: .normal)
         
         // 活動風景
-//        btnActivityLandscape.layer.borderColor = UIColor.gray.cgColor
         btnActivityLandscape.layer.borderWidth = 1
         btnActivityLandscape.layer.cornerRadius = 20
-//        btnActivityLandscape.layer.shadowOpacity = 0.7
-//        btnActivityLandscape.layer.shadowRadius = 3
-//        btnActivityLandscape.layer.shadowColor = UIColor.black.cgColor
-//        btnActivityLandscape.layer.shadowOffset = CGSize(width: 5, height: 5)
         btnActivityLandscape.layer.borderColor = UIColor.systemBlue.cgColor
         btnActivityLandscape.layer.backgroundColor = UIColor.systemBlue.cgColor
         btnActivityLandscape.setTitleColor(UIColor.white, for: .normal)
