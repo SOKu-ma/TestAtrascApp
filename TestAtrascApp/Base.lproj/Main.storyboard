@@ -99,9 +99,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eyM-Bo-1Lv">
-                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="M12-3X-0Av"/>
+                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="M12-3X-0Av">
+                            <connections>
+                                <action selector="btnLogoutTapped:" destination="fCU-dU-kC0" id="Pga-gh-jIV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnLogout" destination="M12-3X-0Av" id="iCt-Z6-fYy"/>
                         <outlet property="tableViewClubInfo" destination="svZ-1Q-p37" id="pUv-hR-Hw8"/>
                     </connections>
                 </viewController>
@@ -139,9 +144,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4gT-CP-LwH">
-                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="eDG-JU-krx"/>
+                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="eDG-JU-krx">
+                            <connections>
+                                <action selector="btnLogoutTapped:" destination="55l-tH-2tP" id="Vez-Ft-wBR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnLogout" destination="eDG-JU-krx" id="I4p-pk-wIV"/>
                         <outlet property="colViewClub" destination="Ji8-im-g1I" id="H1U-Nc-uBS"/>
                     </connections>
                 </viewController>
@@ -149,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="2868.115942028986" y="870.53571428571422"/>
         </scene>
-        <!--Item-->
+        <!--Club Intro Duction Detail View Controller-->
         <scene sceneID="3x0-Go-MRB">
             <objects>
                 <viewController storyboardIdentifier="ClubIntroductionDetail" id="EhV-0S-xvQ" customClass="ClubIntroDuctionDetailViewController" customModule="TestAtrascApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,13 +168,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クラブ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPz-TK-1co">
-                                <rect key="frame" x="146" y="74" width="122" height="36"/>
+                                <rect key="frame" x="146" y="118" width="122" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0V-vW-ZWj">
-                                <rect key="frame" x="100" y="160" width="214" height="60"/>
+                                <rect key="frame" x="100" y="204" width="214" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dXa-df-o64"/>
                                 </constraints>
@@ -175,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSi-2n-kRa">
-                                <rect key="frame" x="100" y="270" width="214" height="60"/>
+                                <rect key="frame" x="100" y="314" width="214" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UPi-f4-0aN"/>
                                 </constraints>
@@ -186,7 +196,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-Wv-DCe">
-                                <rect key="frame" x="100" y="380" width="214" height="60"/>
+                                <rect key="frame" x="100" y="424" width="214" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="DuR-f2-fwl"/>
                                 </constraints>
@@ -213,20 +223,26 @@
                             <constraint firstItem="sPz-TK-1co" firstAttribute="centerX" secondItem="86g-Pu-zIw" secondAttribute="centerX" id="qkG-kK-ckU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gV8-JS-gtp"/>
-                    <navigationItem key="navigationItem" id="ZZg-rB-ls9"/>
+                    <navigationItem key="navigationItem" id="ZZg-rB-ls9">
+                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="Zlr-5A-QPP">
+                            <connections>
+                                <action selector="btnLogoutTapped:" destination="EhV-0S-xvQ" id="8MF-js-2cV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnActivityContent" destination="rSi-2n-kRa" id="b7D-5C-Ntq"/>
                         <outlet property="btnActivityLandscape" destination="fNC-Wv-DCe" id="VZO-sA-cQm"/>
+                        <outlet property="btnLogout" destination="Zlr-5A-QPP" id="Epw-N6-RMw"/>
                         <outlet property="btnMenber" destination="H0V-vW-ZWj" id="I1S-m4-brK"/>
                         <outlet property="lblClubName" destination="sPz-TK-1co" id="05N-wy-t4m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jld-BK-yOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3673.913043478261" y="870.53571428571422"/>
+            <point key="canvasLocation" x="4584.057971014493" y="870.53571428571422"/>
         </scene>
-        <!--Item-->
+        <!--Club Intro Detail Member View Controller-->
         <scene sceneID="ogv-No-Ow8">
             <objects>
                 <viewController storyboardIdentifier="ClubIntroDetailMemberView" id="mfD-CC-173" customClass="ClubIntroDetailMemberViewController" customModule="TestAtrascApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nAo-8q-kJl">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -248,15 +264,21 @@
                             <constraint firstItem="nAo-8q-kJl" firstAttribute="bottom" secondItem="KIN-A9-pBA" secondAttribute="bottom" id="mO7-ZT-mOq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cFB-Ow-aQQ"/>
-                    <navigationItem key="navigationItem" id="NNr-vM-sC8"/>
+                    <navigationItem key="navigationItem" id="NNr-vM-sC8">
+                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="rWE-hO-q1H">
+                            <connections>
+                                <action selector="btnLogoutTapped:" destination="mfD-CC-173" id="R5l-1S-Xez"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="btnLogout" destination="rWE-hO-q1H" id="cMB-h6-pJO"/>
                         <outlet property="tableViewClubMember" destination="nAo-8q-kJl" id="kgy-ez-l6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8c-ew-Jbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4460.8695652173919" y="870.53571428571422"/>
+            <point key="canvasLocation" x="6281.1594202898559" y="870.53571428571422"/>
         </scene>
         <!--Point Check Controller-->
         <scene sceneID="42X-8Y-M2Q">
@@ -288,9 +310,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="620-BT-DsZ">
-                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="1Gl-u6-kDT"/>
+                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="1Gl-u6-kDT">
+                            <connections>
+                                <action selector="btnLogoutTapped:" destination="USr-Nf-POp" id="OHg-qI-OWR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnLogout" destination="1Gl-u6-kDT" id="yMt-5B-BWH"/>
                         <outlet property="searchBarClubPoint" destination="eW2-39-5PF" id="LW3-bI-93F"/>
                         <outlet property="tableViewClubPoint" destination="cpB-xc-yUK" id="noj-26-ptJ"/>
                     </connections>
@@ -307,6 +334,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ZL-bM-fvV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Edd-9D-kJR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0yt-Qx-ytZ"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-3q-vmJ">
                                 <rect key="frame" x="86.5" y="104" width="241.5" height="160"/>
                                 <constraints>
@@ -418,7 +451,7 @@ QVRSQVNDEREREREN44Kv44Op44OW44Ki44OX44OqA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHa-VJ-Vao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="-834"/>
+            <point key="canvasLocation" x="1989.8550724637682" y="-834.375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gcC-WL-JT9">
@@ -496,6 +529,44 @@ QVRSQVNDEREREREN44Kv44Op44OW44Ki44OX44OqA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9q-d4-6VU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="1651.3392857142856"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hTd-oQ-vkZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ZD-cn-iUE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gV8-JS-gtp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z1n-BV-Rs5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EhV-0S-xvQ" kind="relationship" relationship="rootViewController" id="T2o-u3-n0q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipU-z1-Nkh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3673.913043478261" y="870.53571428571422"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ixV-3i-udT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qHG-Bx-b2L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cFB-Ow-aQQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QU2-me-lxU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mfD-CC-173" kind="relationship" relationship="rootViewController" id="6vT-58-6hH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nN8-zK-gMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5371.0144927536239" y="870.53571428571422"/>
         </scene>
     </scenes>
     <resources>

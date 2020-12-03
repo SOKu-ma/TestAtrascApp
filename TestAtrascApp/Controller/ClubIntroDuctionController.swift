@@ -12,6 +12,7 @@ class ClubIntroDuctionController: UIViewController {
     let models = ClubIntroModel.createModels()
     
     @IBOutlet weak var colViewClub: UICollectionView!
+    @IBOutlet weak var btnLogout: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,16 @@ class ClubIntroDuctionController: UIViewController {
         colViewClub.collectionViewLayout = layout
 
     }
+    
+    // ログアウトボタン押下
+    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
+        // ログアウト処理
+        let alertVC = UIAlertController.logoutAlert()
+        self.present(alertVC, animated: true, completion: nil)
+        
+    }
+    
+    
 }
 
 extension ClubIntroDuctionController: UICollectionViewDataSource {
@@ -59,6 +70,9 @@ extension ClubIntroDuctionController: UICollectionViewDataSource {
         
         return cell
     }
+    
+    
+    
 
 
 }

@@ -10,6 +10,10 @@ import UIKit
 class ClubInfomationController: UIViewController {
 
     @IBOutlet weak var tableViewClubInfo: UITableView!
+    @IBOutlet weak var btnLogout: UIBarButtonItem!
+    
+    var userName = UserDefaults.standard.string(forKey: "userName")
+    var password = UserDefaults.standard.string(forKey: "password")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,13 @@ class ClubInfomationController: UIViewController {
     }
 
 
+    // ログアウトボタン押下
+    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
+        // ログアウト処理
+        let alertVC = UIAlertController.logoutAlert()
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
 }
 
 //extension PointCheckController: UITableViewDataSource {

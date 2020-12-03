@@ -7,6 +7,7 @@
 
 import UIKit
 import LocalAuthentication
+import RealmSwift
 
 class LoginViewController: UIViewController {
 
@@ -27,24 +28,12 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // テキストフィールドの整形
-        //
-        contViewUserID.backgroundColor = UIColor.white
-//        contViewUserID.backgroundColor = UIColor.systemBackground
-        contViewUserID.alpha = 0.5
-        contViewUserID.layer.borderWidth = 1
-        contViewUserID.layer.cornerRadius = 10
-//        contViewUserID.layer.borderColor = UIColor.systemBackground.cgColor
-        contViewUserID.layer.borderColor = UIColor.lightGray.cgColor
-//        contViewUserID.layer.borderColor = UIColor.white.cgColor
+        // ユーザID
+        modView(contViewUserID)
         textUserID.borderStyle = .none
         
-        contViewPW.backgroundColor = UIColor.white
-        contViewPW.alpha = 0.5
-        contViewPW.layer.borderWidth = 1
-        contViewPW.layer.cornerRadius = 10
-//        contViewPW.layer.borderColor = UIColor.systemBackground.cgColor
-        contViewPW.layer.borderColor = UIColor.lightGray.cgColor
-//        contViewPW.layer.borderColor = UIColor.white.cgColor
+        // パスワード
+        modView(contViewPW)
         textPW.borderStyle = .none
         
         // ボタンの整形
@@ -65,6 +54,12 @@ class LoginViewController: UIViewController {
         textPW.delegate = self
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        // テキストフィールドからクリア
+        self.textUserID.text = ""
+        self.textPW.text = ""
+    }
+    
     
     @IBAction func didTapLogin(_ sender: UIButton) {
         
@@ -73,16 +68,16 @@ class LoginViewController: UIViewController {
             
             // ユーザマスタのデータと比較
             // エラーメッセージ：「社員番号またはパスワードに誤りがあります。」
-            
             // 一致する「社員番号」がない場合
-            
-            
             // 「社員番号」に紐づく「パスワード」がない場合
             
-            
             // 認証できた場合
+            // UserDefaultsに保存
+            let ud = UserDefaults.standard
+            ud.set(textUserID.text, forKey: "userName")
+            ud.set(textPW.text, forKey: "password")
             
-            // メインメニュー(クラブ情報画面？？)へ遷移
+            // メインメニュー(クラブ情報画面)へ遷移
             let storyboard: UIStoryboard = self.storyboard!
             let clubInfo = storyboard.instantiateViewController(identifier: "MainMenuTab")
             clubInfo.modalPresentationStyle = .fullScreen
@@ -102,6 +97,16 @@ class LoginViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
+    
+    // 共通：Viewの整形
+    func modView(_ view: UIView) {
+        view.backgroundColor = UIColor.white
+        view.alpha = 0.5
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 10
+        view.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
 }
 
 extension LoginViewController: UITextFieldDelegate {

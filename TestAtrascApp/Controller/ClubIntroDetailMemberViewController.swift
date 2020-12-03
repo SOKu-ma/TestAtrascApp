@@ -10,6 +10,8 @@ import UIKit
 class ClubIntroDetailMemberViewController: UIViewController {
 
     @IBOutlet weak var tableViewClubMember: UITableView!
+    @IBOutlet weak var btnLogout: UIBarButtonItem!
+    
     
     let models = ClubIntroModel.createModels()
     
@@ -27,7 +29,12 @@ class ClubIntroDetailMemberViewController: UIViewController {
         
     }
 
-    //
+    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
+        // ログアウト処理
+        let alertVC = UIAlertController.logoutAlert()
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
     
 }
 

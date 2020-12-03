@@ -11,6 +11,8 @@ class PointCheckController: UIViewController {
 
     @IBOutlet weak var searchBarClubPoint: UISearchBar!
     @IBOutlet weak var tableViewClubPoint: UITableView!
+    @IBOutlet weak var btnLogout: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,13 @@ class PointCheckController: UIViewController {
         
     }
     
+    // ログアウトボタン押下
+    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
+        // ログアウト処理
+        let alertVC = UIAlertController.logoutAlert()
+        self.present(alertVC, animated: true, completion: nil)
+        
+    }
     
 
     // 検索バーイベント

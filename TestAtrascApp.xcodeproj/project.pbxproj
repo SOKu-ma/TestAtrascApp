@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */; };
 		051217B32546EAAE00F0A8CF /* ClubInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */; };
+		053A35882567EF3C00A96092 /* UserMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A35872567EF3C00A96092 /* UserMaster.swift */; };
 		05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */; };
 		05B7CDC025431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */; };
 		05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */; };
@@ -26,11 +27,14 @@
 		05CC824A2541751300607762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC82482541751300607762 /* Main.storyboard */; };
 		05CC824C2541751800607762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CC824B2541751800607762 /* Assets.xcassets */; };
 		05CC824F2541751800607762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC824D2541751800607762 /* LaunchScreen.storyboard */; };
+		05FDD0C02578DAE60007A275 /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FDD0BF2578DAE60007A275 /* CommonFunc.swift */; };
+		26EFF65B9E862F050AF84CC6 /* Pods_TestAtrascApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BDEFF1D005CA629057B44B /* Pods_TestAtrascApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfoTableViewCell.swift; sourceTree = "<group>"; };
 		051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubInfoTableViewCell.xib; sourceTree = "<group>"; };
+		053A35872567EF3C00A96092 /* UserMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMaster.swift; sourceTree = "<group>"; };
 		05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroCollectionViewCell.swift; sourceTree = "<group>"; };
 		05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubIntroDetailMemberTableViewCell.xib; sourceTree = "<group>"; };
 		05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDetailMemberTableViewCell.swift; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		05CC824B2541751800607762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CC824E2541751800607762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CC82502541751800607762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05FDD0BF2578DAE60007A275 /* CommonFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
+		33DABBF495DDEA1A926BA298 /* Pods-TestAtrascApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAtrascApp.release.xcconfig"; path = "Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp.release.xcconfig"; sourceTree = "<group>"; };
+		C3BDEFF1D005CA629057B44B /* Pods_TestAtrascApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAtrascApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9B7965B07AE1014A5E9793 /* Pods-TestAtrascApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAtrascApp.debug.xcconfig"; path = "Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EFF65B9E862F050AF84CC6 /* Pods_TestAtrascApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */,
+				053A35872567EF3C00A96092 /* UserMaster.swift */,
+				05FDD0BF2578DAE60007A275 /* CommonFunc.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +114,8 @@
 			children = (
 				05CC82412541751300607762 /* TestAtrascApp */,
 				05CC82402541751300607762 /* Products */,
+				6B4E88C619D340813F53A8F9 /* Pods */,
+				F899E8867C7414F5450D1D9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +143,23 @@
 			path = TestAtrascApp;
 			sourceTree = "<group>";
 		};
+		6B4E88C619D340813F53A8F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA9B7965B07AE1014A5E9793 /* Pods-TestAtrascApp.debug.xcconfig */,
+				33DABBF495DDEA1A926BA298 /* Pods-TestAtrascApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F899E8867C7414F5450D1D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3BDEFF1D005CA629057B44B /* Pods_TestAtrascApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05CC82532541751800607762 /* Build configuration list for PBXNativeTarget "TestAtrascApp" */;
 			buildPhases = (
+				3482F7FB6A91057DB97F0DD0 /* [CP] Check Pods Manifest.lock */,
 				05CC823B2541751300607762 /* Sources */,
 				05CC823C2541751300607762 /* Frameworks */,
 				05CC823D2541751300607762 /* Resources */,
+				BB7839E08C61BE96609F3AF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +230,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3482F7FB6A91057DB97F0DD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestAtrascApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB7839E08C61BE96609F3AF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05CC823B2541751300607762 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -213,8 +287,10 @@
 				05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */,
 				05B7CDC725431BCF004E6A70 /* PointCheckController.swift in Sources */,
 				05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */,
+				05FDD0C02578DAE60007A275 /* CommonFunc.swift in Sources */,
 				05B7CDC525431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift in Sources */,
 				05B7CDC325431BCF004E6A70 /* ClubIntroDuctionController.swift in Sources */,
+				053A35882567EF3C00A96092 /* UserMaster.swift in Sources */,
 				05B7CDC825431BCF004E6A70 /* ClubInfomationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,10 +435,12 @@
 		};
 		05CC82542541751800607762 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA9B7965B07AE1014A5E9793 /* Pods-TestAtrascApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56D5SSHUHW;
 				INFOPLIST_FILE = TestAtrascApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -377,10 +455,12 @@
 		};
 		05CC82552541751800607762 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33DABBF495DDEA1A926BA298 /* Pods-TestAtrascApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56D5SSHUHW;
 				INFOPLIST_FILE = TestAtrascApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

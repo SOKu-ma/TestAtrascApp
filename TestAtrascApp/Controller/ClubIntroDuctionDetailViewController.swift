@@ -14,6 +14,9 @@ class ClubIntroDuctionDetailViewController: UIViewController {
     @IBOutlet weak var btnActivityContent: UIButton!
     @IBOutlet weak var btnActivityLandscape: UIButton!
     
+    @IBOutlet weak var btnLogout: UIBarButtonItem!
+    
+    
     // 引き継ぎプロパティ
     var prpClubName = ""
     
@@ -73,4 +76,13 @@ class ClubIntroDuctionDetailViewController: UIViewController {
         print("didTapActivityLandscape")
         
     }
+    
+    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
+        // ログアウト処理
+        let alertVC = UIAlertController.logoutAlert()
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    
+    
 }
