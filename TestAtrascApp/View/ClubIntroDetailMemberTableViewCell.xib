@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,26 +18,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所属" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJi-Wv-pSi">
-                        <rect key="frame" x="10" y="2" width="35" height="28"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="10" y="2" width="29" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="社員番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-Of-9lM">
-                        <rect key="frame" x="10" y="34" width="70" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="10" y="42" width="57.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="氏名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5X-El-7F7">
-                        <rect key="frame" x="10" y="59" width="35" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="10" y="63" width="29" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="連絡先" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRE-wM-9dl">
-                        <rect key="frame" x="205" y="52" width="66" height="28"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="139" y="52" width="132" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -54,11 +55,17 @@
                     <constraint firstItem="iy9-Of-9lM" firstAttribute="top" secondItem="tJi-Wv-pSi" secondAttribute="bottom" constant="4" id="rY9-pz-zhf"/>
                     <constraint firstAttribute="bottom" secondItem="vRE-wM-9dl" secondAttribute="bottom" constant="4" id="uEK-Sw-0oJ"/>
                     <constraint firstItem="tJi-Wv-pSi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xuY-5C-pG9"/>
-                    <constraint firstItem="vRE-wM-9dl" firstAttribute="leading" secondItem="L5X-El-7F7" secondAttribute="trailing" constant="160" id="yFb-O9-UdH"/>
+                    <constraint firstItem="vRE-wM-9dl" firstAttribute="leading" secondItem="L5X-El-7F7" secondAttribute="trailing" constant="100" id="yFb-O9-UdH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="-110.14492753623189" y="58.258928571428569"/>
+            <connections>
+                <outlet property="lblDepartment" destination="tJi-Wv-pSi" id="L04-Hk-AoA"/>
+                <outlet property="lblMailAdress" destination="vRE-wM-9dl" id="fhq-aM-2fC"/>
+                <outlet property="lblName" destination="L5X-El-7F7" id="fQm-wH-gbe"/>
+                <outlet property="lblUserId" destination="iy9-Of-9lM" id="xXG-kK-KwP"/>
+            </connections>
+            <point key="canvasLocation" x="-265.21739130434787" y="100.44642857142857"/>
         </tableViewCell>
     </objects>
 </document>

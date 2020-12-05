@@ -16,7 +16,6 @@ class ClubIntroDuctionDetailViewController: UIViewController {
     
     @IBOutlet weak var btnLogout: UIBarButtonItem!
     
-    
     // 引き継ぎプロパティ
     var prpClubName = ""
     
@@ -28,25 +27,28 @@ class ClubIntroDuctionDetailViewController: UIViewController {
         
         // 各種ボタンの整形
         // メンバー
-        btnMenber.layer.borderWidth = 1
-        btnMenber.layer.cornerRadius = 20
-        btnMenber.layer.borderColor = UIColor.systemBlue.cgColor
-        btnMenber.layer.backgroundColor = UIColor.systemBlue.cgColor
-        btnMenber.setTitleColor(UIColor.white, for: .normal)
+        self.modButton(btnMenber)
+//        btnMenber.layer.borderWidth = 1
+//        btnMenber.layer.cornerRadius = 20
+//        btnMenber.layer.borderColor = UIColor.systemBlue.cgColor
+//        btnMenber.layer.backgroundColor = UIColor.systemBlue.cgColor
+//        btnMenber.setTitleColor(UIColor.white, for: .normal)
         
         // 活動内容
-        btnActivityContent.layer.borderWidth = 1
-        btnActivityContent.layer.cornerRadius = 20
-        btnActivityContent.layer.borderColor = UIColor.systemBlue.cgColor
-        btnActivityContent.layer.backgroundColor = UIColor.systemBlue.cgColor
-        btnActivityContent.setTitleColor(UIColor.white, for: .normal)
+        self.modButton(btnActivityContent)
+//        btnActivityContent.layer.borderWidth = 1
+//        btnActivityContent.layer.cornerRadius = 20
+//        btnActivityContent.layer.borderColor = UIColor.systemBlue.cgColor
+//        btnActivityContent.layer.backgroundColor = UIColor.systemBlue.cgColor
+//        btnActivityContent.setTitleColor(UIColor.white, for: .normal)
         
         // 活動風景
-        btnActivityLandscape.layer.borderWidth = 1
-        btnActivityLandscape.layer.cornerRadius = 20
-        btnActivityLandscape.layer.borderColor = UIColor.systemBlue.cgColor
-        btnActivityLandscape.layer.backgroundColor = UIColor.systemBlue.cgColor
-        btnActivityLandscape.setTitleColor(UIColor.white, for: .normal)
+        self.modButton(btnActivityLandscape)
+//        btnActivityLandscape.layer.borderWidth = 1
+//        btnActivityLandscape.layer.cornerRadius = 20
+//        btnActivityLandscape.layer.borderColor = UIColor.systemBlue.cgColor
+//        btnActivityLandscape.layer.backgroundColor = UIColor.systemBlue.cgColor
+//        btnActivityLandscape.setTitleColor(UIColor.white, for: .normal)
     }
     
     // メンバーボタンタップ時
@@ -56,8 +58,10 @@ class ClubIntroDuctionDetailViewController: UIViewController {
         
         // クラブ情報画面へ遷移
         let storyboard: UIStoryboard = self.storyboard!
-        let clubInfo = storyboard.instantiateViewController(identifier: "ClubIntroDetailMemberView")
-//        self.present(clubInfo, animated: true, completion: nil)
+        let clubInfo = storyboard.instantiateViewController(identifier: "ClubIntroDetailMemberView") as! ClubIntroDetailMemberViewController
+        // 引き継ぎプロパティ
+        clubInfo.prpClubName = lblClubName.text!
+        
         self.navigationController?.pushViewController(clubInfo, animated: true)
         
     }
@@ -83,6 +87,14 @@ class ClubIntroDuctionDetailViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    
+    // 共通：ボタン整形
+    private func modButton(_ button: UIButton) {
+        
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 20
+        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.backgroundColor = UIColor.systemBlue.cgColor
+        button.setTitleColor(UIColor.white, for: .normal)
+    }
     
 }

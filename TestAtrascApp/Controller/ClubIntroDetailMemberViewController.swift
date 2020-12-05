@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ClubIntroDetailMemberViewController: UIViewController {
 
     @IBOutlet weak var tableViewClubMember: UITableView!
     @IBOutlet weak var btnLogout: UIBarButtonItem!
     
+    // 引き継ぎプロパティ
+    var prpClubName = ""
     
-    let models = ClubIntroModel.createModels()
-    
+    let clubIntroModels = ClubIntroModel.createModels()
     let sections: [String] = ["部長","メンバー"]
+    
+    // Realmを取得
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,19 +55,21 @@ extension ClubIntroDetailMemberViewController: UITableViewDataSource {
         return sections[section]
     }
     
-    
     // セルの総数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         // 部長
         if section == 0 {
             return 1
         }
         // メンバー
         else {
-            return 10
+            // 対象クラブメンバーを取得
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+            let predicate = NSPredicate(format: "ClubName == %@", prpClubName)
+            let clubRosters = realm.objects(ClubRoster.self).filter(predicate)
+            // 部長を除くメンバー数を返す
+            return clubRosters.count - 1
         }
-
     }
     
     // セルを生成
@@ -71,18 +78,14 @@ extension ClubIntroDetailMemberViewController: UITableViewDataSource {
         // XIBよりセルを生成
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClubIntroDetailMemberTableViewCell", for: indexPath) as! ClubIntroDetailMemberTableViewCell
         
-        // Modelクラスから取得
-//        cell.setUpCell(model: models[indexPath.row])
+        // Realmよりデータを設定
+        cell.setUp(targetSection: indexPath.section, targetRow: indexPath.row, targetClubName: self.prpClubName)
+        
+//        print(indexPath.section)
         
         return cell
     }
-    
-    
-    
 }
  
 extension ClubIntroDetailMemberViewController: UITableViewDelegate {
-    
-    
-    
 }

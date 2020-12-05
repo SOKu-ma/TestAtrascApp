@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0507E76D257B43EB00E9E9C3 /* ClubRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507E76C257B43EB00E9E9C3 /* ClubRoster.swift */; };
+		0507E776257B4AC100E9E9C3 /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507E775257B4AC100E9E9C3 /* CommonFunc.swift */; };
 		051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */; };
 		051217B32546EAAE00F0A8CF /* ClubInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */; };
 		053A35882567EF3C00A96092 /* UserMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A35872567EF3C00A96092 /* UserMaster.swift */; };
@@ -27,11 +29,12 @@
 		05CC824A2541751300607762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC82482541751300607762 /* Main.storyboard */; };
 		05CC824C2541751800607762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CC824B2541751800607762 /* Assets.xcassets */; };
 		05CC824F2541751800607762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CC824D2541751800607762 /* LaunchScreen.storyboard */; };
-		05FDD0C02578DAE60007A275 /* CommonFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FDD0BF2578DAE60007A275 /* CommonFunc.swift */; };
 		26EFF65B9E862F050AF84CC6 /* Pods_TestAtrascApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BDEFF1D005CA629057B44B /* Pods_TestAtrascApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0507E76C257B43EB00E9E9C3 /* ClubRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRoster.swift; sourceTree = "<group>"; };
+		0507E775257B4AC100E9E9C3 /* CommonFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
 		051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfoTableViewCell.swift; sourceTree = "<group>"; };
 		051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubInfoTableViewCell.xib; sourceTree = "<group>"; };
 		053A35872567EF3C00A96092 /* UserMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMaster.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		05CC824B2541751800607762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CC824E2541751800607762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CC82502541751800607762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05FDD0BF2578DAE60007A275 /* CommonFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunc.swift; sourceTree = "<group>"; };
 		33DABBF495DDEA1A926BA298 /* Pods-TestAtrascApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAtrascApp.release.xcconfig"; path = "Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp.release.xcconfig"; sourceTree = "<group>"; };
 		C3BDEFF1D005CA629057B44B /* Pods_TestAtrascApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAtrascApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9B7965B07AE1014A5E9793 /* Pods-TestAtrascApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAtrascApp.debug.xcconfig"; path = "Target Support Files/Pods-TestAtrascApp/Pods-TestAtrascApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0507E774257B4AC100E9E9C3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0507E775257B4AC100E9E9C3 /* CommonFunc.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		05B7CDB125431BCE004E6A70 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +114,7 @@
 			children = (
 				05B7CDBE25431BCF004E6A70 /* ClubIntroModel.swift */,
 				053A35872567EF3C00A96092 /* UserMaster.swift */,
-				05FDD0BF2578DAE60007A275 /* CommonFunc.swift */,
+				0507E76C257B43EB00E9E9C3 /* ClubRoster.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +140,7 @@
 		05CC82412541751300607762 /* TestAtrascApp */ = {
 			isa = PBXGroup;
 			children = (
+				0507E774257B4AC100E9E9C3 /* Common */,
 				05B7CDB625431BCF004E6A70 /* Controller */,
 				05B7CDBD25431BCF004E6A70 /* Model */,
 				05B7CDB125431BCE004E6A70 /* View */,
@@ -277,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0507E776257B4AC100E9E9C3 /* CommonFunc.swift in Sources */,
+				0507E76D257B43EB00E9E9C3 /* ClubRoster.swift in Sources */,
 				051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */,
 				05B7CE0825446AD2004E6A70 /* LoginViewController.swift in Sources */,
 				05B7CDC625431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift in Sources */,
@@ -287,7 +300,6 @@
 				05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */,
 				05B7CDC725431BCF004E6A70 /* PointCheckController.swift in Sources */,
 				05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */,
-				05FDD0C02578DAE60007A275 /* CommonFunc.swift in Sources */,
 				05B7CDC525431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift in Sources */,
 				05B7CDC325431BCF004E6A70 /* ClubIntroDuctionController.swift in Sources */,
 				053A35882567EF3C00A96092 /* UserMaster.swift in Sources */,
@@ -368,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
