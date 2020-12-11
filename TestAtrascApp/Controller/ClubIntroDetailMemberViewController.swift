@@ -18,10 +18,7 @@ class ClubIntroDetailMemberViewController: UIViewController {
     
     let clubIntroModels = ClubIntroModel.createModels()
     let sections: [String] = ["部長","メンバー"]
-    
-    // Realmを取得
-    let realm = try! Realm()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

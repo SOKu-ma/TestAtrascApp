@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ClubPointTableViewCell" customModule="TestAtrascApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="氏名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZj-km-2D0">
+                        <rect key="frame" x="80" y="10" width="35" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ポイント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EH-hX-S63">
+                        <rect key="frame" x="125" y="10" width="70" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社員番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LL-wV-7Bn">
+                        <rect key="frame" x="5" y="10" width="70" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aZj-km-2D0" firstAttribute="leading" secondItem="9LL-wV-7Bn" secondAttribute="trailing" constant="5" id="2vc-Il-0bz"/>
+                    <constraint firstItem="0EH-hX-S63" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6oY-mo-B2t"/>
+                    <constraint firstItem="0EH-hX-S63" firstAttribute="leading" secondItem="aZj-km-2D0" secondAttribute="trailing" constant="10" id="Kl7-LX-Xrt"/>
+                    <constraint firstItem="9LL-wV-7Bn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ctp-4i-XdI"/>
+                    <constraint firstItem="aZj-km-2D0" firstAttribute="leading" secondItem="9LL-wV-7Bn" secondAttribute="trailing" constant="5" id="dIx-kB-jcq"/>
+                    <constraint firstAttribute="bottom" secondItem="9LL-wV-7Bn" secondAttribute="bottom" constant="10" id="k63-ey-d16"/>
+                    <constraint firstItem="aZj-km-2D0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lZt-7a-yPi"/>
+                    <constraint firstItem="0EH-hX-S63" firstAttribute="leading" secondItem="aZj-km-2D0" secondAttribute="trailing" constant="10" id="tcH-Cz-j3l"/>
+                    <constraint firstAttribute="bottom" secondItem="0EH-hX-S63" secondAttribute="bottom" constant="10" id="uRb-hg-ota"/>
+                    <constraint firstItem="9LL-wV-7Bn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ycU-lt-GQ0"/>
+                    <constraint firstAttribute="bottom" secondItem="aZj-km-2D0" secondAttribute="bottom" constant="10" id="z8L-LY-gvF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblClubPoint" destination="0EH-hX-S63" id="9PN-5d-1qx"/>
+                <outlet property="lblUserId" destination="9LL-wV-7Bn" id="cZ5-Tj-6QG"/>
+                <outlet property="lblUserName" destination="aZj-km-2D0" id="xOF-Ig-LML"/>
+            </connections>
+            <point key="canvasLocation" x="-122" y="110"/>
+        </tableViewCell>
+    </objects>
+</document>
