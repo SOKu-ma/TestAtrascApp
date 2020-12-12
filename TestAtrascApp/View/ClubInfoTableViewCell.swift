@@ -2,7 +2,7 @@
 //  ClubInfoTableViewCell.swift
 //  TestAtrascApp
 //
-//  Created by 太田修平 on 2020/10/26.
+//  Created by Shuhei Ota on 2020/10/26.
 //
 
 import UIKit

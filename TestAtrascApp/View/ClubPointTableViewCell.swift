@@ -2,7 +2,7 @@
 //  ClubPointTableViewCell.swift
 //  TestAtrascApp
 //
-//  Created by 太田修平 on 2020/12/06.
+//  Created by Shuhei Ota on 2020/12/06.
 //
 
 import UIKit
@@ -32,12 +32,8 @@ class ClubPointTableViewCell: UITableViewCell {
     
     func setUp(targetRow: Int) {
         
-        //
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
         // Realmよりデータを取得
         let predicate = NSPredicate(format: "id == \(targetRow)")
-//        let predicate = NSPredicate(format: "id == 0")
         let models = self.realm.objects(ClubPoint.self)
         if models.count > 0 {
             let target = self.realm.objects(ClubPoint.self).filter(predicate).first

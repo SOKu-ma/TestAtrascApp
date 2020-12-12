@@ -18,6 +18,8 @@ class PointCheckController: UIViewController {
     // ローカルホストから取得
     let localUrl = "http://localhost:3000/api"
     
+    let reflesh = UIRefreshControl()
+    
     struct Users: Codable {
         var USERID: String
         var USERNAME: String
@@ -36,6 +38,43 @@ class PointCheckController: UIViewController {
         let nib = UINib(nibName: "ClubPointTableViewCell", bundle: nil)
         tableViewClubPoint.register(nib, forCellReuseIdentifier: "ClubPointTableViewCell")
         
+        // インジケーターの定義
+        reflesh.tintColor = UIColor.label
+        reflesh.addTarget(self, action: #selector(self.reloadClubPointTableView), for: .valueChanged)
+        tableViewClubPoint.refreshControl = reflesh
+        
+        // Realm登録データ削除
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let delObj = realm.objects(ClubPoint.self).filter("userName != %@", "")
+        if delObj.count > 0 {
+            try! realm.write {
+                realm.delete(delObj)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // API取得
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let Obj = realm.objects(ClubPoint.self).filter("userName != %@", "")
+
+        if Obj.count == 0 {
+            getAPI()
+        }
+    }
+    
+    // ログアウトボタン押下
+    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
+        // ログアウト処理
+        let alertVC = UIAlertController.logoutAlert()
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    // -- Function --
+    // API取得
+    private func getAPI() -> Void {
+    
         // APIを実行
         AF.request(localUrl, method: .get, encoding: JSONEncoding.default).response { response in
             
@@ -45,21 +84,12 @@ class PointCheckController: UIViewController {
                 // 取得したJSONをUsersクラスのオブジェクトにパース
                 guard let data = response.data else { return }
                 guard let json: [Users] = try? JSONDecoder().decode([Users].self, from: data) else { return }
-
-                // Realm登録データを削除
-                print(Realm.Configuration.defaultConfiguration.fileURL!)
-                let delObj = realm.objects(ClubPoint.self).filter("userName != %@", "")
-                if delObj.count > 0 {
-                    try! realm.write {
-                        realm.delete(delObj)
-                    }
-                }
                 
                 for cnt in 0 ..< json.count {
 
                     let obj = ClubPoint()
                     obj.id = cnt
-                    obj.userId = json[cnt].USERNAME
+                    obj.userId = json[cnt].USERID
                     obj.userName = json[cnt].USERNAME
                     obj.grant = json[cnt].GRANT
                     obj.remaining = json[cnt].REMAINING
@@ -71,24 +101,47 @@ class PointCheckController: UIViewController {
                     }
                 }
                 
+                self.tableViewClubPoint.reloadData()
+                
             case .failure(let error):
                 // エラー
                 print("error::\(error)")
+                
+                // アラート作成
+                let alert = UIAlertController(title: "クラブポイント取得に失敗しました。", message: "", preferredStyle: .alert)
+
+                // アラート表示
+                self.present(alert, animated: true, completion: {
+                    // アラートを閉じる
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                        alert.dismiss(animated: true, completion: nil)
+
+                        // 登録完了時にユーザへアクション（バイブ）
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.error)
+
+                    })
+                })
             
             }
         }
+        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
+    // インジケータの処理
+    @objc func reloadClubPointTableView(){
+        
+        // API取得
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let Obj = realm.objects(ClubPoint.self).filter("userName != %@", "")
+
+        if Obj.count == 0 {
+            getAPI()
+        }
+        // セルをリロード
+        tableViewClubPoint.reloadData()
+        // インジケーターを終了
+        self.reflesh.endRefreshing()
     }
-    
-    // ログアウトボタン押下
-    @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
-        // ログアウト処理
-        let alertVC = UIAlertController.logoutAlert()
-        self.present(alertVC, animated: true, completion: nil)
-    }
-    
     
 }
 

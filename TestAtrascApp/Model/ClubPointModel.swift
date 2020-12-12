@@ -2,7 +2,7 @@
 //  ClubPointModel.swift
 //  TestAtrascApp
 //
-//  Created by 太田修平 on 2020/12/10.
+//  Created by Shuhei Ota on 2020/12/10.
 //
 
 import Foundation
