@@ -77,9 +77,6 @@ extension ClubIntroDetailMemberViewController: UITableViewDataSource {
         
         // Realmよりデータを設定
         cell.setUp(targetSection: indexPath.section, targetRow: indexPath.row, targetClubName: self.prpClubName)
-        
-//        print(indexPath.section)
-        
         return cell
     }
 }

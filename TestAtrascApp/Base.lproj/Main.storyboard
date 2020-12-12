@@ -196,30 +196,16 @@
                                     <action selector="didTapActivityContent:" destination="EhV-0S-xvQ" eventType="touchUpInside" id="XAC-GH-4ld"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-Wv-DCe">
-                                <rect key="frame" x="100" y="424" width="214" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="DuR-f2-fwl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="活動風景"/>
-                                <connections>
-                                    <action selector="didTapActivityLandscape:" destination="EhV-0S-xvQ" eventType="touchUpInside" id="tkA-N8-fLt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OPw-eg-TdJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H0V-vW-ZWj" firstAttribute="centerX" secondItem="86g-Pu-zIw" secondAttribute="centerX" id="CC6-PQ-hj0"/>
                             <constraint firstItem="rSi-2n-kRa" firstAttribute="leading" secondItem="OPw-eg-TdJ" secondAttribute="leading" constant="100" id="Dwo-Pm-57c"/>
-                            <constraint firstItem="fNC-Wv-DCe" firstAttribute="centerX" secondItem="86g-Pu-zIw" secondAttribute="centerX" id="Oqe-YO-ZPs"/>
-                            <constraint firstItem="fNC-Wv-DCe" firstAttribute="leading" secondItem="OPw-eg-TdJ" secondAttribute="leading" constant="100" id="OwY-c8-9Cl"/>
                             <constraint firstItem="rSi-2n-kRa" firstAttribute="top" secondItem="H0V-vW-ZWj" secondAttribute="bottom" constant="50" id="P57-jP-HgD"/>
                             <constraint firstItem="H0V-vW-ZWj" firstAttribute="leading" secondItem="OPw-eg-TdJ" secondAttribute="leading" constant="100" id="TIu-Yu-xHN"/>
                             <constraint firstItem="sPz-TK-1co" firstAttribute="top" secondItem="OPw-eg-TdJ" secondAttribute="top" constant="30" id="Y7M-cS-0qj"/>
                             <constraint firstItem="rSi-2n-kRa" firstAttribute="centerX" secondItem="86g-Pu-zIw" secondAttribute="centerX" id="c71-8X-gVH"/>
-                            <constraint firstItem="fNC-Wv-DCe" firstAttribute="top" secondItem="rSi-2n-kRa" secondAttribute="bottom" constant="50" id="gj0-T6-PKD"/>
                             <constraint firstItem="H0V-vW-ZWj" firstAttribute="top" secondItem="sPz-TK-1co" secondAttribute="bottom" constant="50" id="idy-s1-3lQ"/>
                             <constraint firstItem="sPz-TK-1co" firstAttribute="centerX" secondItem="86g-Pu-zIw" secondAttribute="centerX" id="qkG-kK-ckU"/>
                         </constraints>
@@ -233,7 +219,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnActivityContent" destination="rSi-2n-kRa" id="b7D-5C-Ntq"/>
-                        <outlet property="btnActivityLandscape" destination="fNC-Wv-DCe" id="VZO-sA-cQm"/>
                         <outlet property="btnLogout" destination="Zlr-5A-QPP" id="Epw-N6-RMw"/>
                         <outlet property="btnMenber" destination="H0V-vW-ZWj" id="I1S-m4-brK"/>
                         <outlet property="lblClubName" destination="sPz-TK-1co" id="05N-wy-t4m"/>

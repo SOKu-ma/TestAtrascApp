@@ -2,11 +2,15 @@
 //  CommonFunc.swift
 //  TestAtrascApp
 //
-//  Created by 太田修平 on 2020/12/03.
+//  Created by Shuhei Ota on 2020/12/03.
 //
 
 import Foundation
 import UIKit
+import RealmSwift
+
+// Realmの宣言
+let realm = try! Realm()
 
 extension UIAlertController {
     

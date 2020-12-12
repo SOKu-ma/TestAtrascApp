@@ -12,7 +12,6 @@ class ClubIntroDuctionDetailViewController: UIViewController {
     @IBOutlet weak var lblClubName: UILabel!
     @IBOutlet weak var btnMenber: UIButton!
     @IBOutlet weak var btnActivityContent: UIButton!
-    @IBOutlet weak var btnActivityLandscape: UIButton!
     @IBOutlet weak var btnLogout: UIBarButtonItem!
     
     // 引き継ぎプロパティ
@@ -20,19 +19,13 @@ class ClubIntroDuctionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 値の引き継ぎ
         lblClubName.text = prpClubName
-        
         // 各種ボタンの整形
         // メンバー
         self.modButton(btnMenber)
-
         // 活動内容
         self.modButton(btnActivityContent)
-        
-        // 活動風景
-        self.modButton(btnActivityLandscape)
     }
     
     // メンバーボタンタップ時
@@ -54,13 +47,8 @@ class ClubIntroDuctionDetailViewController: UIViewController {
     }
     
     
-    // 活動風景ボタンタップ時
-    @IBAction func didTapActivityLandscape(_ sender: UIButton) {
-        print("didTapActivityLandscape")
-    }
-    
+    // ログアウト処理
     @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {
-        // ログアウト処理
         let alertVC = UIAlertController.logoutAlert()
         self.present(alertVC, animated: true, completion: nil)
     }

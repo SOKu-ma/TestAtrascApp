@@ -18,8 +18,10 @@ class PointCheckController: UIViewController {
     // ローカルホストから取得
     let localUrl = "http://localhost:3000/api"
     
+    // RefreshControllerの宣言
     let reflesh = UIRefreshControl()
     
+    // API処理用のモデル
     struct Users: Codable {
         var USERID: String
         var USERNAME: String
@@ -28,11 +30,24 @@ class PointCheckController: UIViewController {
         var USE: String
     }
     
+    //
+    struct Item {
+        var userId: String
+        var userName: String
+        var grant: String
+        var remaining: String
+        var use: String
+    }
+    
+    var items = [Item]()
+    var currentItems = [Item]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableViewClubPoint.dataSource = self
         tableViewClubPoint.delegate = self
+        searchBarClubPoint.delegate = self
         
         // NIB(XIB)を使用するための宣言
         let nib = UINib(nibName: "ClubPointTableViewCell", bundle: nil)
@@ -99,6 +114,7 @@ class PointCheckController: UIViewController {
                     try! realm.write {
                         realm.add(obj)
                     }
+                    
                 }
                 
                 self.tableViewClubPoint.reloadData()
@@ -112,11 +128,11 @@ class PointCheckController: UIViewController {
 
                 // アラート表示
                 self.present(alert, animated: true, completion: {
-                    // アラートを閉じる
+                    // 自動でアラートを閉じる
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                         alert.dismiss(animated: true, completion: nil)
 
-                        // 登録完了時にユーザへアクション（バイブ）
+                        // 失敗時のユーザへのリアクション（バイブ）
                         let generator = UINotificationFeedbackGenerator()
                         generator.notificationOccurred(.error)
 
@@ -151,6 +167,9 @@ extension PointCheckController: UITableViewDataSource {
         // Realmの登録件数分
         let models = realm.objects(ClubPoint.self)
         return models.count
+        
+//        return currentItems.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -160,6 +179,11 @@ extension PointCheckController: UITableViewDataSource {
         
         // Realmよりデータを設定
         cell.setUp(targetRow: indexPath.row)
+        
+//        let rowData = currentItems[indexPath.row]
+//        cell.lblUserId.text = rowData.userId
+//        cell.lblUserName.text = rowData.userName
+//        cell.lblClubPoint.text = rowData.use
         
         return cell
         
@@ -171,4 +195,16 @@ extension PointCheckController: UITableViewDelegate {
 }
 
 extension PointCheckController: UISearchBarDelegate {
+    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        guard !searchText.isEmpty else {
+//            currentItems = items
+//            tableViewClubPoint.reloadData()
+//            return
+//        }
+//        currentItems = items.filter({ item -> Bool in
+//            item.userId.lowercased().contains(searchText.lowercased())
+//        })
+//        tableViewClubPoint.reloadData()
+//    }
 }

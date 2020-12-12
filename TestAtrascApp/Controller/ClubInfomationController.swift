@@ -37,17 +37,15 @@ class ClubInfomationController: UIViewController {
 
 //extension PointCheckController: UITableViewDataSource {
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return
+//        return 1
 //    }
 //
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = UITableViewCell()
-//
-//        return
+//        return cell
 //    }
 //}
 //
 //
 //extension PointCheckController: UITableViewDelegate {
-//
 //}
