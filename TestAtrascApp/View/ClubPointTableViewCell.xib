@@ -18,19 +18,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="氏名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZj-km-2D0">
-                        <rect key="frame" x="95" y="10" width="35" height="24"/>
+                        <rect key="frame" x="110" y="10" width="35" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ポイント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EH-hX-S63">
-                        <rect key="frame" x="210" y="10" width="70" height="24"/>
+                        <rect key="frame" x="175" y="10" width="70" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社員番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LL-wV-7Bn">
-                        <rect key="frame" x="5" y="10" width="70" height="24"/>
+                        <rect key="frame" x="20" y="10" width="70" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,13 +38,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="aZj-km-2D0" firstAttribute="leading" secondItem="9LL-wV-7Bn" secondAttribute="trailing" constant="20" id="2vc-Il-0bz"/>
-                    <constraint firstAttribute="trailing" secondItem="0EH-hX-S63" secondAttribute="trailing" constant="40" id="55Y-HE-fSL"/>
                     <constraint firstItem="0EH-hX-S63" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6oY-mo-B2t"/>
                     <constraint firstItem="9LL-wV-7Bn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ctp-4i-XdI"/>
+                    <constraint firstItem="0EH-hX-S63" firstAttribute="leading" secondItem="aZj-km-2D0" secondAttribute="trailing" constant="30" id="hwj-Xw-XK9"/>
                     <constraint firstAttribute="bottom" secondItem="9LL-wV-7Bn" secondAttribute="bottom" constant="10" id="k63-ey-d16"/>
                     <constraint firstItem="aZj-km-2D0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lZt-7a-yPi"/>
                     <constraint firstAttribute="bottom" secondItem="0EH-hX-S63" secondAttribute="bottom" constant="10" id="uRb-hg-ota"/>
-                    <constraint firstItem="9LL-wV-7Bn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ycU-lt-GQ0"/>
+                    <constraint firstItem="9LL-wV-7Bn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ycU-lt-GQ0"/>
                     <constraint firstAttribute="bottom" secondItem="aZj-km-2D0" secondAttribute="bottom" constant="10" id="z8L-LY-gvF"/>
                 </constraints>
             </tableViewCellContentView>

@@ -21,6 +21,12 @@ class PointCheckController: UIViewController {
     // RefreshControllerの宣言
     let reflesh = UIRefreshControl()
     
+    // 検索窓のMaxLength
+    let searchMaxLength = 7
+    
+    // セクションヘッダ
+    let sectionHeader = "社員番号・氏名・残ポイント"
+    
     // API処理用のモデル
     struct Users: Codable {
         var USERID: String
@@ -30,17 +36,13 @@ class PointCheckController: UIViewController {
         var USE: String
     }
     
-    //
-    struct Item {
-        var userId: String
-        var userName: String
-        var grant: String
-        var remaining: String
-        var use: String
+    struct SearchList {
+        var id: Int             // tableViewの表示件数に該当
+        var userId: String      // 検索されたuserID
     }
     
-    var items = [Item]()
-    var currentItems = [Item]()
+    var searchWord = String()
+    var listUserId: [SearchList] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,7 @@ class PointCheckController: UIViewController {
                 realm.delete(delObj)
             }
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -153,6 +156,11 @@ class PointCheckController: UIViewController {
         if Obj.count == 0 {
             getAPI()
         }
+        
+        if !searchWord.isEmpty {
+            searchWord = ""
+        }
+        
         // セルをリロード
         tableViewClubPoint.reloadData()
         // インジケーターを終了
@@ -162,14 +170,37 @@ class PointCheckController: UIViewController {
 }
 
 extension PointCheckController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionHeader
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        // Realmの登録件数分
-        let models = realm.objects(ClubPoint.self)
-        return models.count
-        
-//        return currentItems.count
-        
+        if !searchWord.isEmpty {
+
+            let str = "\(searchWord)*"
+            let predicate = NSPredicate(format: "userId LIKE %@", str)
+            let models = realm.objects(ClubPoint.self).filter(predicate)
+            
+            if listUserId.count > 0 {
+                listUserId.removeAll()
+            }
+            
+            if models.count > 0 {
+                // 近似検索で取得できた「UserId」をリストに格納
+                for cnt in 0 ..< models.count {
+                    listUserId.append(SearchList(id: cnt, userId: models[cnt].userId))
+                    
+                }
+            }
+            return models.count
+        }
+        else {
+            // Realmの登録件数分
+            let models = realm.objects(ClubPoint.self)
+            return models.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -178,12 +209,12 @@ extension PointCheckController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClubPointTableViewCell", for: indexPath) as! ClubPointTableViewCell
         
         // Realmよりデータを設定
-        cell.setUp(targetRow: indexPath.row)
-        
-//        let rowData = currentItems[indexPath.row]
-//        cell.lblUserId.text = rowData.userId
-//        cell.lblUserName.text = rowData.userName
-//        cell.lblClubPoint.text = rowData.use
+        if searchWord == "" {
+            cell.setUp(targetRow: indexPath.row, searchWord: searchWord)
+        }
+        else {
+            cell.searchWordSetUp(targetUserId: listUserId[indexPath.row].userId)
+        }
         
         return cell
         
@@ -196,15 +227,30 @@ extension PointCheckController: UITableViewDelegate {
 
 extension PointCheckController: UISearchBarDelegate {
     
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        guard !searchText.isEmpty else {
-//            currentItems = items
-//            tableViewClubPoint.reloadData()
-//            return
-//        }
-//        currentItems = items.filter({ item -> Bool in
-//            item.userId.lowercased().contains(searchText.lowercased())
-//        })
-//        tableViewClubPoint.reloadData()
-//    }
+    // 検索バーのワードを取得
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            
+            searchWord = ""
+            tableViewClubPoint.reloadData()
+            return
+            
+        }
+        
+        if searchText.count > 8 {
+            // 8文字以上が入力された場合、先頭7文字を取得
+            searchWord = String(searchText.prefix(searchMaxLength))
+        }
+        else {
+            searchWord = searchText
+            tableViewClubPoint.reloadData()
+        }
+    }
+    
+    // 検索キータップ時に呼び出されるメソッド
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+        
 }

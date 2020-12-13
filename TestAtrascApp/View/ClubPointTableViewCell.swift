@@ -30,18 +30,35 @@ class ClubPointTableViewCell: UITableViewCell {
         lblClubPoint.text = ""
     }
     
-    func setUp(targetRow: Int) {
-        
-        // Realmよりデータを取得
-        let predicate = NSPredicate(format: "id == \(targetRow)")
-        let models = self.realm.objects(ClubPoint.self)
-        if models.count > 0 {
-            let target = self.realm.objects(ClubPoint.self).filter(predicate).first
-            
-            self.lblUserId.text = target?.userId
-            self.lblUserName.text = target?.userName
-            self.lblClubPoint.text = target?.remaining
+    // 通常の取得
+    func setUp(targetRow: Int, searchWord: String) {
+     
+        guard !searchWord.isEmpty else {
+            // Realmよりデータを取得
+            let predicate = NSPredicate(format: "id == \(targetRow)")
+            let models = self.realm.objects(ClubPoint.self)
+            if models.count > 0 {
+                let target = self.realm.objects(ClubPoint.self).filter(predicate).first
+                
+                self.lblUserId.text = target?.userId
+                self.lblUserName.text = target?.userName
+                self.lblClubPoint.text = target?.remaining
+            }
+            return
         }
+        
+    }
+
+    // 検索キーワードありの取得
+    func searchWordSetUp(targetUserId: String) {
+        
+        // Realmより検索ワードを含むデータを取得
+        let predicate = NSPredicate(format: "userId == %@", targetUserId)
+        let target = self.realm.objects(ClubPoint.self).filter(predicate).first
+
+        self.lblUserId.text = target?.userId
+        self.lblUserName.text = target?.userName
+        self.lblClubPoint.text = target?.remaining
     }
     
 }

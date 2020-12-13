@@ -23,7 +23,7 @@ class ClubInfomationController: UIViewController {
 //        tableViewClubInfo.dataSource = self
 //        tableViewClubInfo.delegate = self
         
-    }
+    } 
 
 
     // ログアウトボタン押下
