@@ -16,10 +16,16 @@ class PointCheckController: UIViewController {
     @IBOutlet weak var btnLogout: UIBarButtonItem!
     
     // ローカルホストから取得
-    let localUrl = "http://localhost:3000/api"
+//    let url = "http://localhost:3000/api"
+    
+    // Webから取得
+    let url = "https://test202012171836.azurewebsites.net"
     
     // RefreshControllerの宣言
     let reflesh = UIRefreshControl()
+    
+    // インジケータView
+    var activityIndicator = UIActivityIndicatorView()
     
     // 検索窓のMaxLength
     let searchMaxLength = 7
@@ -55,10 +61,16 @@ class PointCheckController: UIViewController {
         let nib = UINib(nibName: "ClubPointTableViewCell", bundle: nil)
         tableViewClubPoint.register(nib, forCellReuseIdentifier: "ClubPointTableViewCell")
         
-        // インジケーターの定義
+        // TableView用インジケータ
         reflesh.tintColor = UIColor.label
         reflesh.addTarget(self, action: #selector(self.reloadClubPointTableView), for: .valueChanged)
         tableViewClubPoint.refreshControl = reflesh
+        
+        // 画面用インジケータ
+        activityIndicator.center = self.view.center
+        activityIndicator.style = .large
+        activityIndicator.color = UIColor.label
+        self.view.addSubview(activityIndicator)
         
         // Realm登録データ削除
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -78,6 +90,10 @@ class PointCheckController: UIViewController {
         let Obj = realm.objects(ClubPoint.self).filter("userName != %@", "")
 
         if Obj.count == 0 {
+
+            // 画面用インジケーター
+            activityIndicator.startAnimating()
+
             getAPI()
         }
     }
@@ -94,7 +110,7 @@ class PointCheckController: UIViewController {
     private func getAPI() -> Void {
     
         // APIを実行
-        AF.request(localUrl, method: .get, encoding: JSONEncoding.default).response { response in
+        AF.request(url, method: .get, encoding: JSONEncoding.default).response { response in
             
             switch response.result {
             case .success:
@@ -121,10 +137,13 @@ class PointCheckController: UIViewController {
                 }
                 
                 self.tableViewClubPoint.reloadData()
+                self.activityIndicator.stopAnimating()
                 
             case .failure(let error):
                 // エラー
                 print("error::\(error)")
+                
+                self.activityIndicator.stopAnimating()
                 
                 // アラート作成
                 let alert = UIAlertController(title: "クラブポイント取得に失敗しました。", message: "", preferredStyle: .alert)
