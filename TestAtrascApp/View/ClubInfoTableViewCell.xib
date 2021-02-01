@@ -1,23 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="KGk-i7-Jjw" customClass="ClubInfoTableViewCell" customModule="TestAtrascApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="clubInfoTableViewCell" rowHeight="83" id="KGk-i7-Jjw" customClass="ClubInfoTableViewCell" customModule="TestAtrascApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="ClubInfoTableViewCell" customModule="TestAtrascApp" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="294" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クラブ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXt-RX-lOd">
+                        <rect key="frame" x="10" y="5" width="69.5" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="e53-6H-0Ji"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="クラブ情報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArS-CK-jMg">
+                        <rect key="frame" x="10" y="39" width="87" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="RmQ-lS-9lm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7N-4R-vc2">
+                        <rect key="frame" x="104.5" y="5" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ArS-CK-jMg" firstAttribute="top" secondItem="qXt-RX-lOd" secondAttribute="bottom" constant="10" id="BWy-p4-5tv"/>
+                    <constraint firstItem="qXt-RX-lOd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="OqY-gD-eNF"/>
+                    <constraint firstItem="T7N-4R-vc2" firstAttribute="leading" secondItem="qXt-RX-lOd" secondAttribute="trailing" constant="25" id="Sye-GW-pgF"/>
+                    <constraint firstItem="ArS-CK-jMg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="b6O-Zg-xsY"/>
+                    <constraint firstItem="qXt-RX-lOd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="e6T-hK-Kup"/>
+                    <constraint firstItem="T7N-4R-vc2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="hzW-fi-hG0"/>
+                    <constraint firstAttribute="bottom" secondItem="ArS-CK-jMg" secondAttribute="bottom" constant="5" id="uUZ-hT-VeI"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="85.507246376811594" y="106.47321428571428"/>
+            <connections>
+                <outlet property="lblClubInfo" destination="ArS-CK-jMg" id="4Gs-yH-bjF"/>
+                <outlet property="lblClubName" destination="qXt-RX-lOd" id="GVs-3h-NLN"/>
+                <outlet property="lblDate" destination="T7N-4R-vc2" id="cXS-ul-CT4"/>
+            </connections>
+            <point key="canvasLocation" x="-0.7246376811594204" y="75.334821428571431"/>
         </tableViewCell>
     </objects>
 </document>
