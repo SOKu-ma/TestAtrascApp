@@ -627,6 +627,7 @@ QVRSQVNDEREREREN44Kv44Op44OW44Ki44OX44OqA
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="nlQ-bc-axK">
                                 <rect key="frame" x="20" y="207" width="374" height="55"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="N7a-Xm-2E2"/>
                                 </constraints>
@@ -640,7 +641,9 @@ QVRSQVNDEREREREN44Kv44Op44OW44Ki44OX44OqA
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp0-lt-AFO">
                                 <rect key="frame" x="20" y="137.5" width="374" height="30"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="クラブ名"/>
+                                <state key="normal" title="クラブ名">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="部活名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oG-in-DXv">
                                 <rect key="frame" x="20" y="118" width="37" height="14.5"/>
@@ -654,7 +657,9 @@ QVRSQVNDEREREREN44Kv44Op44OW44Ki44OX44OqA
                                     <constraint firstAttribute="height" constant="30" id="3uf-oQ-5F9"/>
                                 </constraints>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="活動詳細を書く"/>
+                                <state key="normal" title="活動詳細を書く">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="btnClubDetailTapped:" destination="gzN-nO-5b9" eventType="touchUpInside" id="Mpx-UG-qB0"/>
                                 </connections>

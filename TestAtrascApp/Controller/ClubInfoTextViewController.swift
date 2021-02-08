@@ -16,9 +16,8 @@ class ClubInfoTextViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         clubDetailTextView.delegate = self
-        
+        clubDetailTextView.text = clubDetailText
     }
     
     // -- 完了ボタン押下 --
@@ -34,9 +33,20 @@ class ClubInfoTextViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
 }
 
 extension ClubInfoTextViewController: UITextViewDelegate {
+    // textViewにフォーカス時
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "活動詳細を書く" {
+            textView.text = ""
+            textView.textColor = .label
+        }
+    }
+    // 画面外タップでキーボードクローズ
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if clubDetailTextView.isFirstResponder {
+            clubDetailTextView.resignFirstResponder()
+        }
+    }
 }

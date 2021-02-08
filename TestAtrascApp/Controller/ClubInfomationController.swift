@@ -86,20 +86,27 @@ class ClubInfomationController: UIViewController {
         // API取得
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         let Obj = realm.objects(ClubInfo.self)
-        
         // 画面用インジケーター
         activityIndicator.startAnimating()
-        
         if Obj.count == 0 {
             getAPI()
         }
         self.activityIndicator.stopAnimating()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        getAPI()
-//        tableViewClubInfo.reloadData()
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        // Realm登録データ削除
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let delObj = realm.objects(ClubInfo.self)
+        if delObj.count > 0 {
+            try! realm.write {
+                realm.delete(delObj)
+            }
+            getAPI()
+        }
+        tableViewClubInfo.reloadData()
+    }
     
     // -- Function --
     // API取得
@@ -116,29 +123,23 @@ class ClubInfomationController: UIViewController {
                 guard let json: [clubInfo] = try? JSONDecoder().decode([clubInfo].self, from: data) else { return }
                 
                 for cnt in 0 ..< json.count {
-                    
                     let obj = ClubInfo()
                     obj.Id = cnt
                     obj.ClubName = json[cnt].name
                     obj.Date = json[cnt].date
                     obj.Detail = json[cnt].detail
+                    obj.Order = json.count - cnt - 1
                     
                     // 取得したデータをRealmへ格納
                     try! realm.write {
                         realm.add(obj)
                     }
-                    
                 }
-                
                 self.tableViewClubInfo.reloadData()
-            //                self.activityIndicator.stopAnimating()
             
             case .failure(let error):
                 // エラー
                 print("error::\(error)")
-                
-                //                self.activityIndicator.stopAnimating()
-                
                 // アラート作成
                 let alert = UIAlertController(title: "クラブ情報の取得に失敗しました。", message: "", preferredStyle: .alert)
                 
@@ -147,17 +148,13 @@ class ClubInfomationController: UIViewController {
                     // 自動でアラートを閉じる
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                         alert.dismiss(animated: true, completion: nil)
-                        
                         // 失敗時のユーザへのリアクション（バイブ）
                         let generator = UINotificationFeedbackGenerator()
                         generator.notificationOccurred(.error)
-                        
                     })
                 })
-                
             }
         }
-        
     }
     
     // インジケータの処理
@@ -209,6 +206,15 @@ class ClubInfomationController: UIViewController {
     
     // 
     func callBack() {
+        // Realm登録データ削除
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let delObj = realm.objects(ClubInfo.self)
+        if delObj.count > 0 {
+            try! realm.write {
+                realm.delete(delObj)
+            }
+            getAPI()
+        }
         tableViewClubInfo.reloadData()
     }
     
@@ -236,17 +242,14 @@ extension ClubInfomationController: UITableViewDataSource {
         // XIBよりセルを生成
         let cell = tableView.dequeueReusableCell(withIdentifier: "clubInfoTableViewCell", for: indexPath) as! ClubInfoTableViewCell
         cell.setUp(indexPathRow: indexPath.row)
-//        arrRowNum[indexPath.row] cell.rowNum
         arrRowNum.append(cell.rowNum)
-        print("arrRowNum[cell.rowNum]::\(arrRowNum[cell.rowNum])")
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = CGFloat(60)
+        let height = CGFloat(80)
         return height
     }
 }
-
 
 extension ClubInfomationController: UITableViewDelegate {
     
@@ -259,9 +262,6 @@ extension ClubInfomationController: UITableViewDelegate {
         // 引き継ぎプロパティ
         clubInfoVC.indexRow = indexPath.row
         
-        
-        
         self.navigationController?.pushViewController(clubInfoVC, animated: true)
-//        self.present(clubInfoVC, animated: true, completion: nil)
     }
 }

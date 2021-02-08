@@ -15,6 +15,7 @@ class ClubInfo: Object, Codable {
     @objc dynamic var ClubName = ""           // クラブ名
     @objc dynamic var Date = ""               // 活動日時
     @objc dynamic var Detail = ""             // 活動詳細
+    @objc dynamic var Order = 0               // 表示順
     
     override static func primaryKey() -> String? {
         return "Id"

@@ -25,7 +25,8 @@ class SendClubInfoViewController: UIViewController {
     
     var arrClubs: [UIMenuElement] = []
     // テスト用
-    let arrClub: [String] = ["野球部","サッカー部","ゴルフ部","テニス部"]
+//    let arrClub: [String] = ["野球部","サッカー部","ゴルフ部","テニス部"]
+    let arrClub = ClubIntroModel.createModels()
     
     // インジケータView
     var activityIndicator = UIActivityIndicatorView()
@@ -61,8 +62,8 @@ class SendClubInfoViewController: UIViewController {
         
         // クラブ名取得
         for cnt in 0 ..< arrClub.count {
-            let tabMenu = UIAction(title: (arrClub[cnt]), image: nil) { (_) in
-                self.btnClubName.setTitle(self.arrClub[cnt], for: .normal)
+            let tabMenu = UIAction(title: (arrClub[cnt].clubName), image: nil) { (_) in
+                self.btnClubName.setTitle(self.arrClub[cnt].clubName, for: .normal)
             }
             arrClubs.append(tabMenu)
         }
@@ -107,6 +108,7 @@ class SendClubInfoViewController: UIViewController {
         let sb: UIStoryboard = self.storyboard!
         let clubInfoTextVC = sb.instantiateViewController(identifier: "clubInfoTextViewController") as! ClubInfoTextViewController
         clubInfoTextVC.modalPresentationStyle = .fullScreen
+        print("btnClubDetail.currentTitle!::\(btnClubDetail.currentTitle!)")
         clubInfoTextVC.clubDetailText = btnClubDetail.currentTitle!
         self.present(clubInfoTextVC, animated: true, completion: nil)
     }
@@ -122,9 +124,9 @@ class SendClubInfoViewController: UIViewController {
         let dateFormatter = DateFormatter()
         let timeFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "yyyy年MM月dd日"
-        timeFormatter.dateFormat = "HH時mm分"
-        let date = dateFormatter.string(from: datePicker.date) + timeFormatter.string(from: datePicker.date)
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        timeFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.string(from: datePicker.date) + " " + timeFormatter.string(from: datePicker.date)
         
         
         let headers: HTTPHeaders = [
@@ -147,11 +149,8 @@ class SendClubInfoViewController: UIViewController {
             
             switch response.result {
             case .success:
-                // success
                 print("成功")
-
                 self.activityIndicator.stopAnimating()
-                
                 // アラート作成
                 let alert = UIAlertController(title: "送信完了しました。", message: "", preferredStyle: .alert)
                 
@@ -170,10 +169,8 @@ class SendClubInfoViewController: UIViewController {
                 })
                 
             case .failure(let error):
-                // エラー
                 print("error::\(error)")
                 self.activityIndicator.stopAnimating()
-                
                 // アラート作成
                 let alert = UIAlertController(title: "送信に失敗しました。", message: "", preferredStyle: .alert)
 
