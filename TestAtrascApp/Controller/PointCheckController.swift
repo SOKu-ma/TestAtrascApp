@@ -85,6 +85,15 @@ class PointCheckController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        // Realm登録データ削除
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        let delObj = realm.objects(ClubPoint.self).filter("userName != %@", "")
+        if delObj.count > 0 {
+            try! realm.write {
+                realm.delete(delObj)
+            }
+        }
+
         // API取得
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         let Obj = realm.objects(ClubPoint.self).filter("userName != %@", "")
@@ -97,6 +106,30 @@ class PointCheckController: UIViewController {
             getAPI()
         }
     }
+    
+//    // -- 投稿フォーム画面からの戻り時に実行するコールバック関数 --
+//    func callBack() {
+//        // Realm登録データ削除
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        let delObj = realm.objects(ClubPoint.self).filter("userName != %@", "")
+//        if delObj.count > 0 {
+//            try! realm.write {
+//                realm.delete(delObj)
+//            }
+//        }
+//        
+//        // API取得
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        let Obj = realm.objects(ClubPoint.self).filter("userName != %@", "")
+//
+//        if Obj.count == 0 {
+//
+//            // 画面用インジケーター
+//            activityIndicator.startAnimating()
+//
+//            getAPI()
+//        }
+//    }
     
     // ログアウトボタン押下
     @IBAction func btnLogoutTapped(_ sender: UIBarButtonItem) {

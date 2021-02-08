@@ -13,7 +13,11 @@
 		0507E7A7257D056A00E9E9C3 /* ClubPointTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507E7A5257D056A00E9E9C3 /* ClubPointTableViewCell.xib */; };
 		051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */; };
 		051217B32546EAAE00F0A8CF /* ClubInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */; };
+		0525C7D625C26A2300992F70 /* ClubInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525C7D525C26A2300992F70 /* ClubInfoModel.swift */; };
 		053A35882567EF3C00A96092 /* UserMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053A35872567EF3C00A96092 /* UserMaster.swift */; };
+		058498F125B47A560099FDE6 /* ClubInfomationDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058498F025B47A560099FDE6 /* ClubInfomationDetailController.swift */; };
+		058498F425B484AF0099FDE6 /* SendClubInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058498F325B484AF0099FDE6 /* SendClubInfoViewController.swift */; };
+		059CAEBB25C2CAA7002323F4 /* ClubInfoTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059CAEBA25C2CAA7002323F4 /* ClubInfoTextViewController.swift */; };
 		05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */; };
 		05B7CDC025431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */; };
 		05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */; };
@@ -42,7 +46,11 @@
 		0507E7A5257D056A00E9E9C3 /* ClubPointTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubPointTableViewCell.xib; sourceTree = "<group>"; };
 		051217B02546EAAE00F0A8CF /* ClubInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfoTableViewCell.swift; sourceTree = "<group>"; };
 		051217B12546EAAE00F0A8CF /* ClubInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClubInfoTableViewCell.xib; sourceTree = "<group>"; };
+		0525C7D525C26A2300992F70 /* ClubInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfoModel.swift; sourceTree = "<group>"; };
 		053A35872567EF3C00A96092 /* UserMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMaster.swift; sourceTree = "<group>"; };
+		058498F025B47A560099FDE6 /* ClubInfomationDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfomationDetailController.swift; sourceTree = "<group>"; };
+		058498F325B484AF0099FDE6 /* SendClubInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendClubInfoViewController.swift; sourceTree = "<group>"; };
+		059CAEBA25C2CAA7002323F4 /* ClubInfoTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubInfoTextViewController.swift; sourceTree = "<group>"; };
 		05B7CDB225431BCE004E6A70 /* ClubIntroCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroCollectionViewCell.swift; sourceTree = "<group>"; };
 		05B7CDB325431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubIntroDetailMemberTableViewCell.xib; sourceTree = "<group>"; };
 		05B7CDB425431BCE004E6A70 /* ClubIntroDetailMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubIntroDetailMemberTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +121,9 @@
 				05B7CDBA25431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift */,
 				05B7CDBB25431BCF004E6A70 /* PointCheckController.swift */,
 				05B7CDBC25431BCF004E6A70 /* ClubInfomationController.swift */,
+				058498F025B47A560099FDE6 /* ClubInfomationDetailController.swift */,
+				058498F325B484AF0099FDE6 /* SendClubInfoViewController.swift */,
+				059CAEBA25C2CAA7002323F4 /* ClubInfoTextViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 				053A35872567EF3C00A96092 /* UserMaster.swift */,
 				0507E76C257B43EB00E9E9C3 /* ClubRoster.swift */,
 				05E5D281258252E4000A291D /* ClubPointModel.swift */,
+				0525C7D525C26A2300992F70 /* ClubInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,17 +314,21 @@
 				0507E76D257B43EB00E9E9C3 /* ClubRoster.swift in Sources */,
 				051217B22546EAAE00F0A8CF /* ClubInfoTableViewCell.swift in Sources */,
 				05B7CE0825446AD2004E6A70 /* LoginViewController.swift in Sources */,
+				059CAEBB25C2CAA7002323F4 /* ClubInfoTextViewController.swift in Sources */,
 				05B7CDC625431BCF004E6A70 /* ClubIntroDetailMemberViewController.swift in Sources */,
 				05B7CDC425431BCF004E6A70 /* ViewController.swift in Sources */,
 				05CC82432541751300607762 /* AppDelegate.swift in Sources */,
 				05CC82452541751300607762 /* SceneDelegate.swift in Sources */,
+				0525C7D625C26A2300992F70 /* ClubInfoModel.swift in Sources */,
 				05B7CDC925431BCF004E6A70 /* ClubIntroModel.swift in Sources */,
 				05B7CDBF25431BCF004E6A70 /* ClubIntroCollectionViewCell.swift in Sources */,
 				05B7CDC725431BCF004E6A70 /* PointCheckController.swift in Sources */,
 				05B7CDC125431BCF004E6A70 /* ClubIntroDetailMemberTableViewCell.swift in Sources */,
 				05B7CDC525431BCF004E6A70 /* ClubIntroDuctionDetailViewController.swift in Sources */,
+				058498F125B47A560099FDE6 /* ClubInfomationDetailController.swift in Sources */,
 				05B7CDC325431BCF004E6A70 /* ClubIntroDuctionController.swift in Sources */,
 				05E5D282258252E5000A291D /* ClubPointModel.swift in Sources */,
+				058498F425B484AF0099FDE6 /* SendClubInfoViewController.swift in Sources */,
 				053A35882567EF3C00A96092 /* UserMaster.swift in Sources */,
 				05B7CDC825431BCF004E6A70 /* ClubInfomationController.swift in Sources */,
 				0507E7A6257D056A00E9E9C3 /* ClubPointTableViewCell.swift in Sources */,
